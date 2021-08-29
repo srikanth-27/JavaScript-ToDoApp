@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
-        margin: 0;
+        margin: 1%;
         min-width: 250px;
       }
 
@@ -13,8 +13,13 @@
       }
 
       ul {
-        margin: 0;
+        margin-top: 1rem;
         padding: 0;
+        width: 25%;
+      }
+
+      li {
+        margin: 0.7rem 0;
       }
 
       ul li {
@@ -53,11 +58,8 @@
       }
 
       input {
-        border: soild;
-        border-radius: 2;
         width: 75%;
         padding: 10px;
-        float: left;
         font-size: 16px;
       }
 
@@ -66,7 +68,7 @@
         width: 25%;
         background: #d9d9d9;
         color: #555;
-        float: left;
+        margin-left: 0.9rem;
         text-align: center;
         font-size: 16px;
         cursor: pointer;
@@ -80,7 +82,7 @@
   </head>
   <body>
     <div id="myDIV" class="header">
-      <h2 style="margin: 5px">To-Do App</h2>
+      <h2 style="margin: 25px">To-Do App</h2>
       <input type="text" id="myInput" placeholder="Add Item ..." />
       <span onclick="newElement()" class="addBtn">Add</span>
     </div>
@@ -105,7 +107,7 @@
         var t = document.createTextNode(inputValue);
         li.appendChild(t);
         if (inputValue === "") {
-          alert("You must write something!");
+          alert("Please enter Item to add");
         } else {
           document.getElementById("myUL").appendChild(li);
         }
